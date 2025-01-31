@@ -11,13 +11,13 @@ function requestAPI(searchTerm) {
 
 function displayResults(result) {
   resultPLaylist.classList.add("hidden");
-  const artistName = docuement.getElementById("artist-name");
+  const artistName = document.getElementById("artist-name");
   const artistImage = document.getElementById("artist-img");
   result.forEach(element => {
     artistName.innerText = element.name;
     artistImage.src = element.urlImg;
   });
-  result.classList.remove("hidden");
+  resultArtist.classList.remove("hidden");
 }
 
 document.addEventListener("input", () => {
@@ -28,4 +28,5 @@ document.addEventListener("input", () => {
     resultArtist.classList.remove("hidden");
     return;
   }
+  requestAPI(searchValue);
 });
