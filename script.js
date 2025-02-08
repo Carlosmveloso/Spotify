@@ -24,8 +24,8 @@ document.addEventListener("input", () => {
   const searchValue = searchInput.value.toLowerCase();
   // Um = é igual a concatenação, Dois == significa igualdade, Três === significa igualdade e do mesmo
   if (searchValue === "") {
-    resultPLaylist.classList.add("hidden");
-    resultArtist.classList.remove("hidden");
+    resultPLaylist.classList.remove("hidden");
+    resultArtist.classList.add("hidden");
     return;
   }
   requestAPI(searchValue);
